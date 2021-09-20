@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_job_finder_ui/screens/home.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFF43B1B7),
         backgroundColor: const Color(0xFFFED408)
       ),
-      home:  HomeScreen(),
+      home:  const HomeScreen(),
     );
   }
 }

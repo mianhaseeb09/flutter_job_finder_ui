@@ -19,11 +19,11 @@ class _SearchOptionState extends State<SearchOption> {
   @override
   Widget build(BuildContext context) {
     var keys = optionMap.keys.toList();
-    return Container(
+    return SizedBox(
       height: 25,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         itemBuilder: (context, index) =>
             GestureDetector(
               onTap: () {
@@ -33,7 +33,7 @@ class _SearchOptionState extends State<SearchOption> {
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                     color: optionMap[keys[index]] != null &&
                         optionMap[keys[index]] == true
@@ -59,9 +59,9 @@ class _SearchOptionState extends State<SearchOption> {
                     if(optionMap[keys[index]] != null &&
                         optionMap[keys[index]] == true)
                       Row(
-                        children: [
-                          SizedBox(width: 10,),
-                          Icon(Icons.close,size: 15,color: Colors.white,)
+                        children: const[
+                           SizedBox(width: 10,),
+                           Icon(Icons.close,size: 15,color: Colors.white,)
                         ],
                       )
                   ],
@@ -69,7 +69,7 @@ class _SearchOptionState extends State<SearchOption> {
               ),
             ),
         separatorBuilder: (_, index) =>
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
         itemCount: optionMap.length,

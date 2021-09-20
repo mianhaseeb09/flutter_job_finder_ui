@@ -6,13 +6,15 @@ import 'package:flutter_job_finder_ui/widgets/job_item.dart';
 class JobList extends StatelessWidget {
   final jobList = Job.generateJobs();
 
+   JobList({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 25),
+      margin: const EdgeInsets.symmetric(vertical: 25),
       height: 160,
       child: ListView.separated(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => GestureDetector(
           onTap: (){
@@ -26,7 +28,7 @@ class JobList extends StatelessWidget {
             child: JobItem(
           job: jobList[index],
         )),
-        separatorBuilder: (_, index) => SizedBox(
+        separatorBuilder: (_, index) => const SizedBox(
           width: 15,
         ),
         itemCount: jobList.length,

@@ -12,10 +12,10 @@ class IconsText extends StatelessWidget {
     return Row(
       children: [
         Icon(icon,color: Colors.yellow,),
-        SizedBox(width: 10,),
+        const SizedBox(width: 10,),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 12,
             color: Colors.grey
           ),

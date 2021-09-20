@@ -30,9 +30,9 @@ class SearchScreen extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SearchAppBar(),
-              SearchInput(),
-              SearchOption(),
+              const SearchAppBar(),
+              const SearchInput(),
+              const SearchOption(),
               Expanded(child: SearchList())
             ],
           )

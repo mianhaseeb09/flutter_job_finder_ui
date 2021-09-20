@@ -10,8 +10,8 @@ class JobDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(25),
+      decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(30), topRight: Radius.circular(30))),
@@ -25,7 +25,7 @@ class JobDetail extends StatelessWidget {
               width: 60,
               color: Colors.grey.withOpacity(0.3),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Column(
@@ -37,7 +37,7 @@ class JobDetail extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
@@ -45,12 +45,12 @@ class JobDetail extends StatelessWidget {
                               color: Colors.grey.withOpacity(0.1)),
                           child: Image.asset(job.logoUrl),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
                           job.company,
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         )
                       ],
                     ),
@@ -64,17 +64,17 @@ class JobDetail extends StatelessWidget {
                               ? Theme.of(context).primaryColor
                               : Colors.black,
                         ),
-                        Icon(Icons.more_horiz_outlined)
+                        const Icon(Icons.more_horiz_outlined)
                       ],
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   job.title,
-                  style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -82,37 +82,37 @@ class JobDetail extends StatelessWidget {
                     IconsText(icon: Icons.access_time_outlined, text: job.time),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text(
+                const Text(
                   'Requirements',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style:  TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ...job.req
                     .map((e) => Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
+                  margin: const EdgeInsets.symmetric(vertical: 5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 10),
+                        margin: const EdgeInsets.only(top: 10),
                         height: 5,
                         width: 5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Colors.black),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       ConstrainedBox(
-                        constraints: BoxConstraints(maxWidth: 300),
+                        constraints: const BoxConstraints(maxWidth: 300),
                         child: Text(
                           e,
-                          style: TextStyle(
+                          style: const TextStyle(
                             wordSpacing: 2.5,
                             height: 1.5,
                           ),
@@ -124,7 +124,7 @@ class JobDetail extends StatelessWidget {
                 ))
                     .toList(),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical:25),
+                  margin: const EdgeInsets.symmetric(vertical:25),
                   height: 40,
                   width: double.maxFinite,
                   child: ElevatedButton(
@@ -136,7 +136,7 @@ class JobDetail extends StatelessWidget {
                         )
                     ),
                     onPressed: (){},
-                    child: Text('Apply Now'),
+                    child: const Text('Apply Now'),
                   ),
 
 

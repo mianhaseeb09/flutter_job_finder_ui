@@ -14,7 +14,7 @@ class _TagsListState extends State<TagsList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       height: 40,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
@@ -25,7 +25,7 @@ class _TagsListState extends State<TagsList> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   decoration: BoxDecoration(
                       color: selected == index
                           ? Theme.of(context).primaryColor.withOpacity(0.2)
@@ -40,7 +40,7 @@ class _TagsListState extends State<TagsList> {
                   child: Text(tagList[index]),
                 ),
               ),
-          separatorBuilder: (_, index) => SizedBox(
+          separatorBuilder: (_, index) => const SizedBox(
                 width: 15,
               ),
           itemCount: tagList.length),

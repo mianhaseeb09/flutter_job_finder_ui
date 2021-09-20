@@ -29,9 +29,9 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeAppBar(),
-              SearchCard(),
-              TagsList(),
+              const HomeAppBar(),
+              const SearchCard(),
+              const TagsList(),
               JobList(),
             ],
           ),
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).backgroundColor,
         elevation: 0,
         onPressed: () {},
-        child: Icon(Icons.add,color: Colors.white,),
+        child: const Icon(Icons.add,color: Colors.white,),
       ),
       bottomNavigationBar: Theme(
         data: ThemeData(
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
           showUnselectedLabels: false,
           selectedItemColor: Theme.of(context).primaryColor,
           type: BottomNavigationBarType.fixed,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(
